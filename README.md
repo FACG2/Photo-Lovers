@@ -1,2 +1,2 @@
-# Photo-Lovers
+# Photo Lovers
 Week 8 project
