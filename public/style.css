@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1000px;
+	width: 100%;
+	margin: auto;
+}
+h1{
+	display: flex;
+	justify-content: center;
+	text-transform: capitalize;
+	margin: 20px 0;
+
+}
+#btn-post{
+	width: 110px;
+	padding: 8px 0;
+	background-color: #e74c3c;
+	border: none;
+	color: #FFF
+}
+nav .sec-form form .txt{
+	width: 400px;
+	padding: 8px 0 8px 3px
+}
+
+#head{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+nav .sec-form form .btn-post{
+	display: flex;
+	justify-content: space-between;
+}
+nav .sec-form,
+nav .photo{
+	display: flex;
+	justify-content: center;
+	/*border: 1px solid #000;*/
+	padding: 15px 0
+}
+nav .photo{
+	margin-top: 20px
+}
+
+nav .photo .image{
+	overflow: hidden;
+
+}
+nav .photo .image img{
+	max-height: 400px;
+	max-width: 400px
+}
+
+nav .photo .image .like{
+	display: flex;
+	justify-content: space-between;
+}
+nav .photo .image .like span{
+	align-self: center;
+}
+nav .photo .image .like .btn-like{
+	background-color: #FFF;
+	border: none;
+
+}
+nav .photo .image .like .btn-like img{
+	width: 40px;
+	height: 40px;
+}

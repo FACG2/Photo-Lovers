@@ -4,9 +4,14 @@
   "description": "Week 8 project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js"
+
+    "lint": "semistandard --fix",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FACG2/Photo-Lovers.git"
@@ -16,5 +21,24 @@
   "bugs": {
     "url": "https://github.com/FACG2/Photo-Lovers/issues"
   },
-  "homepage": "https://github.com/FACG2/Photo-Lovers#readme"
+
+  "homepage": "https://github.com/FACG2/Photo-Lovers#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2",
+    "shot": "^3.4.2",
+    "supertest": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "env": "0.0.2",
+    "env2": "^2.2.0",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "path": "^0.12.7",
+    "path.join": "^1.0.0",
+    "pg": "^7.2.0",
+    "semistandard": "^11.0.0"
+  }
 }
