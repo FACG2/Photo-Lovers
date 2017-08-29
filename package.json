@@ -1,0 +1,20 @@
+{
+  "name": "photo-lovers",
+  "version": "1.0.0",
+  "description": "Week 8 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG2/Photo-Lovers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG2/Photo-Lovers/issues"
+  },
+  "homepage": "https://github.com/FACG2/Photo-Lovers#readme"
+}
