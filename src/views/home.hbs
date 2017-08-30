@@ -1,13 +1,16 @@
-	{{#each photoList}}
+	{{#each data}}
 	<div class="image">
 	<h4 id="head">{{this.title}}</h4>
-		<img src={{this.filePath}} alt=""><br><br>
+		<img src="{{this.filepath}}" alt={{this.title}}><br><br>
 		<div class="like">
 			<span>{{this.tags}}</span>
+			<form action ="/like" method="POST">
+				<input type="hidden" name="id" value="{{this.id}}" />
 			<button class="btn-like">
+			</form>
 				<span id="count">{{this.likes}}</span>
 				<img src="images/like1.png" alt="like">
-			</button>						
+			</button>
 		</div>
 	</div>
 

@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const controllers = require('./controllers/index.js');
 const bodyParser = require('body-parser');
-// const helpers = require('./views/helpers/index');
+// const helpers = require('./views');
 
 const app = express();
 
@@ -17,15 +17,20 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-    htmlHeadsDir: path.join(__dirname, 'views', 'htmlHead'),
-    formSearchDir: path.join(__dirname, 'views', 'form-search'),
-    formDataDir: path.join(__dirname, 'views', 'form-data'),
     defaultLayout: 'main'
     // helpers: helpers
   })
 );
 
-app.set('port', process.env.PORT || 2200);
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.render('error', {
+    message: err.message,
+    error: {}
+  });
+});
+
+app.set('port', process.env.PORT || 7600);
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 

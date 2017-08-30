@@ -1,12 +1,14 @@
-// // getLikesByID
-// const queries = require('../model/index');
-//
-// exports.get = (req, res) => {
-//   queries.get.getLikesByID(1, (err, Ldata) => {
-//     if (err) {
-//       console.log(err);
-//     }
-//     console.log('like' + Ldata);
-//     res.render(Ldata);
-//   });
-// };
+// getLikesByID
+const pic = require('../model/index');
+
+exports.post = (req, res, next) => {
+  console.log(req.body);
+  pic.post.incementLikeById(req.body, (err, ALdata) => {
+    if (err) {
+      next(err);
+    } else {
+      // console.log(ALdata);
+      res.redirect('/');
+    }
+  });
+};
