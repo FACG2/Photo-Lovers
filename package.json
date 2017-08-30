@@ -4,6 +4,7 @@
   "description": "Week 8 project",
   "main": "index.js",
   "scripts": {
+
     "lint": "semistandard --fix",
     "start": "NODE_ENV=test node src/index.js",
     "test": "NODE_ENV=test node tests/routes.test.js | tap-spec",
@@ -21,6 +22,7 @@
   "bugs": {
     "url": "https://github.com/FACG2/Photo-Lovers/issues"
   },
+
   "homepage": "https://github.com/FACG2/Photo-Lovers#readme",
   "devDependencies": {
     "nodemon": "^1.11.0",

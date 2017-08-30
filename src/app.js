@@ -17,6 +17,9 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
+    htmlHeadsDir: path.join(__dirname, 'views', 'htmlHead'),
+    formSearchDir: path.join(__dirname, 'views', 'form-search'),
+    formDataDir: path.join(__dirname, 'views', 'form-data'),
     defaultLayout: 'main'
     // helpers: helpers
   })
