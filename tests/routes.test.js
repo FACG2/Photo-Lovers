@@ -1,7 +1,7 @@
 const test = require('tape');
 const supertest = require('supertest');
 const app = require('../src/app.js');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 test('test to return all photo', (t) => {
   supertest(app)
