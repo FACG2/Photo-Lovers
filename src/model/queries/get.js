@@ -50,6 +50,7 @@ const getLikesByID = (id, cb) => {
     if (err) {
       cb(err);
     } else {
+      console.log(data.rows);
       cb(null, data.rows[0].likes);
     }
   });

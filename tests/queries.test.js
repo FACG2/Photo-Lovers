@@ -1,6 +1,7 @@
 const test = require('tape');
 const get = require('../src/model/queries/get');
 const post = require('../src/model/queries/post');
+const dbConnection = require('../database/db_connection.js');
 
 test('get all photos', (t) => {
   get.getAllPhotos((err, data) => {
