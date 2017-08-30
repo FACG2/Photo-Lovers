@@ -53,3 +53,15 @@ test('insert a photo', (t) => {
     t.end();
   });
 });
+
+test('incement one like and check it\'s incemented to the older value', (t) => {
+  var id = 1;
+  get.getLikesByID(id, (err, olderData) => {
+    t.equal(err, null, 'error should be null');
+    post.incementLikeById(id, (err, updatedData) => {
+      t.equal(err, null, 'error should be null');
+      t.equal(olderData + 1, updatedData, 'updated data should be incemnted by one');
+      t.end();
+    });
+  });
+});
