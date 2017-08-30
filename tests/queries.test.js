@@ -1,6 +1,7 @@
 const test = require('tape');
 const get = require('../src/model/queries/get');
 const post = require('../src/model/queries/post');
+const dbConnection = require('../database/db_connection.js');
 
 test('get all photos', (t) => {
   get.getAllPhotos((err, data) => {
@@ -51,5 +52,17 @@ test('insert a photo', (t) => {
     t.equal(Number.isInteger(data.id), true, 'should return a number as an Id');
     t.equal(data.title, photo.title, `${data.title} shoul equald ${photo.title}`);
     t.end();
+  });
+});
+
+test('incement one like and check it\'s incemented to the older value', (t) => {
+  var id = 1;
+  get.getLikesByID(id, (err, olderData) => {
+    t.equal(err, null, 'error should be null');
+    post.incementLikeById(id, (err, updatedData) => {
+      t.equal(err, null, 'error should be null');
+      t.equal(olderData + 1, updatedData, 'updated data should be incemnted by one');
+      t.end();
+    });
   });
 });

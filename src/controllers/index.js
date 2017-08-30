@@ -19,23 +19,59 @@ router.get('/data', (req, res) => {
   });
 });
 
-router.get('/like', (req, res) => {
-  pic.get.getLikesByID(1, (err, Ldata) => {
+router.get('/like/:id/', (req, res) => {
+  console.log(req.params.id);
+  pic.get.getLikesByID(parseInt(req.params.id), (err, Ldata) => {
     if (err) {
       console.log(err);
     }
     // console.log(Ldata);
-    res.send('' + Ldata);
+    res.status(200).json(Ldata);
   });
 });
 
-router.get('/tag', (req, res) => {
-  pic.get.getPhotosByTag('#sea #houses', (err, Tdata) => {
+router.get('/tag/:tags', (req, res) => {
+  pic.get.getPhotosByTag(req.params.tags, (err, Tdata) => {
     if (err) {
       console.log(err);
     }
-    // console.log(Tdata);
+    console.log(Tdata);
     res.send(Tdata);
+  });
+});
+
+router.get('/ph/:id/', (req, res) => {
+  pic.get.getphotoById(req.params.id, (err, Pdata) => {
+    if (err) {
+      console.log(err);
+    }
+    // console.log(Pdata);
+    res.status(200).json(Pdata);
+  });
+});
+
+// addPhoto
+router.post('/addpic', (req, res) => {
+  var photo = req.body;
+  // console.log(req);
+  pic.post.addPhoto(photo, (err, Adata) => {
+    if (err) {
+      console.log(err);
+    }
+    // console.log(Adata);
+    res.send(Adata);
+  });
+});
+
+// incementLikeById
+router.post('/addlike', (req, res) => {
+  console.log(req.body);
+  pic.post.incementLikeById(req.body, (err, ALdata) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log(ALdata);
+    res.send('' + ALdata);
   });
 });
 module.exports = router;
