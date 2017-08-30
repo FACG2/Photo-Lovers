@@ -19,7 +19,7 @@ app.engine(
   })
 );
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 1100);
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
