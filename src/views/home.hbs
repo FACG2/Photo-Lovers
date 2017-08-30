@@ -1,0 +1,14 @@
+	{{#each photoList}}
+	<div class="image">
+	<h4 id="head">{{this.title}}</h4>
+		<img src={{this.filePath}} alt=""><br><br>
+		<div class="like">
+			<span>{{this.tags}}</span>
+			<button class="btn-like">
+				<span id="count">{{this.likes}}</span>
+				<img src="images/like1.png" alt="like">
+			</button>						
+		</div>
+	</div>
+
+	{{/each}}

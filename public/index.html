@@ -13,16 +13,31 @@
 	<title>Photo Lovers</title>
 </head>
 	<body>
-	<nav>
+	<main>
 		<div class="container">
+		<br>
 		<h1>welcome to photo lovers</h1>
+		<br>
+
 			<section class="sec-form">
-				<form>
-					<input class="txt" type="text" name="title" placeholder="Title"><br><br>
-					<input class="txt" type="text" name="tage" placeholder="Tags"><br><br>
+					<form class="search-form">
+						<div class="btn-search">
+							<input class="txt-search" type="text" name="search" placeholder="Search" maxlength="30">
+							<button id="btn-search">Search</button>
+						</div>			
+				</form>					
+				<br>
+
+				<form class="data-form">
+					<p id="para">add post</p><br>
+					<input class="txt" type="text" name="title" placeholder="Title" maxlength="20"><br><br>
+					<input class="txt" type="text" name="tage" placeholder="Tags" maxlength="20"><br><br>
 					<div class="btn-post">
-						<input type="file" name="choos-file">
-						<button id="btn-post">post</button>						
+						<div class="custom-file">
+							<span>choose your photo</span>
+							<input type="file" name="choos-file">
+						</div>
+						<button id="btn-post">Post</button>						
 					</div>
 				</form>
 			</section>
@@ -32,14 +47,17 @@
 					<img src="images/mk.jpg" alt=""><br><br>
 					<div class="like">
 						<span># 03</span>
-						<button class="btn-like"><img src="images/like1.png" alt="like"></button>						
+						<button class="btn-like">
+						<span id="count">05</span>
+							<img src="images/like1.png" alt="like">
+						</button>			
 					</div>
 				</div>
 
 			</section>
 			
 		</div>
-	</nav>
+	</main>
 
 	</body>
 </html>
