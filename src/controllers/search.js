@@ -6,7 +6,6 @@ exports.get = (req, res, next) => {
     if (err) {
       next(err);
     } else {
-      console.log(data);
       res.render('home', {data});
     }
   });
