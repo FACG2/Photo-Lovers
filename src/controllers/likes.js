@@ -1,8 +1,7 @@
-// getLikesByID
 const pic = require('../model/index');
 
-exports.post = (req, res, next) => {
-  pic.post.incementLikeById(req.body, (err, ALdata) => {
+exports.get = (req, res, next) => {
+  pic.post.incementLikeById(req.query.id, (err, data) => {
     if (err) {
       next(err);
     } else {

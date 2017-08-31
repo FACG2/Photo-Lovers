@@ -1,17 +1,17 @@
-	{{#each data}}
+{{#each data}}
 	<div class="image">
-	<h4 id="head">{{this.title}}</h4>
-		<img src="{{this.filepath}}" alt={{this.title}}><br><br>
+		<h4 id="head">{{this.title}}</h4>
+		<img src="{{this.filepath}}" alt= {{this.title}}><br><br>
 		<div class="like">
 			<span>{{this.tags}}</span>
-			<form action ="/like" method="POST">
-				<input type="hidden" name="id" value="{{this.id}}" />
-			<button class="btn-like">
-			</form>
+			<form action="/likes" method="GET">
+				<input type="hidden" name="id" value="{{this.id}}">
+				<button type="submit" class="btn-like">
 				<span id="count">{{this.likes}}</span>
 				<img src="assets/icons/like1.png" alt="like">
 			</button>
+			</form>
 		</div>
 	</div>
 
-	{{/each}}
+{{/each}}
