@@ -9,9 +9,7 @@
     "test": "NODE_ENV=test node tests/routes.test.js | tap-spec",
     "buildDB": "NODE_ENV=test node src/model/database/db_build.js"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FACG2/Photo-Lovers.git"
