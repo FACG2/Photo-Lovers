@@ -21,6 +21,9 @@ app.engine(
     // helpers: helpers
   })
 );
+// app.use((req, res) => {
+//   res.status(404).render('error')
+// });
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
@@ -30,7 +33,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.set('port', process.env.PORT || 7600);
+app.set('port', process.env.PORT || 2000);
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
 

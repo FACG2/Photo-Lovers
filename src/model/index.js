@@ -1,4 +1,4 @@
 module.exports = {
-  get: require('./queries/get'),
-  post: require('./queries/post')
+  get: require('./queries/photos'),
+  post: require('./queries/users')
 };
