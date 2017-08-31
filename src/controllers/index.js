@@ -5,11 +5,11 @@ const router = express.Router();
 const home = require('./home');
 const search = require('./search');
 const addpic = require('./addpic');
-const like = require('./likes');
+const likes = require('./likes');
 
 router.get('/', home.get);
 router.get('/search', search.get);
 router.post('/addpic', addpic.post);
-router.post('/like', like.post);
+router.get('/likes', likes.get);
 
 module.exports = router;
