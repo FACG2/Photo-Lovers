@@ -6,10 +6,13 @@ const home = require('./home');
 const search = require('./search');
 const addpic = require('./addpic');
 const like = require('./likes');
+const error = require('./error');
 
 router.get('/', home.get);
 router.get('/search', search.get);
 router.post('/addpic', addpic.post);
 router.post('/like', like.post);
+router.use(error.client);
+router.use(error.server);
 
 module.exports = router;
